@@ -19,7 +19,7 @@ const Property = ({
           <Image src={coverPhoto ? coverPhoto.url : defaultImage} alt="house" width={400} height={260} />
         </Box>
         <Box w="full">
-          <Flex paddingTop="2" alignItem="center" justifyContent="Space-between" >
+          <Flex paddingTop="2" alignItems="center" justifyContent="Space-between" >
             <Flex alignItems="center">
               <Box paddingRight="3" color="green.400"> {isVerified && <GoVerified />} </Box>
               <Text fontWeight="bold" fontSize="lg"> AED {millify(price)}{rentFrequency && `/${rentFrequency}`}  </Text>
