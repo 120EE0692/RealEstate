@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import { Flex, Box, Text, Icon } from "@chakra-ui/react";
 import { BsFilter } from "react-icons/bs";
-import { baseUrl, fetchApi } from "../utils/fetchApi(rename)";
+import { baseUrl, fetchApi } from "../utils/fetchApi";
 
 import SearchFilters from "../components/SearchFilter";
 import Property from "../components/Property";
