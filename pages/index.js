@@ -57,7 +57,7 @@ export default function Home({ propertiesForSale, propertiesForRent }) {
 
       <Flex flexWrap="wrap">
         {propertiesForRent.map((property) => (
-          <Property property={property} hey={property.id} />
+          <Property property={property} key={property.id} />
         ))}
       </Flex>
 
@@ -74,7 +74,7 @@ export default function Home({ propertiesForSale, propertiesForRent }) {
 
       <Flex flexWrap="wrap">
         {propertiesForSale.map((property) => (
-          <Property property={property} hey={property.id} />
+          <Property property={property} key={property.id} />
         ))}
       </Flex>
     </div>
