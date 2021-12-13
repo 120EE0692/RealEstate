@@ -14,36 +14,33 @@ const Banner = ({
   buttonText,
   linkName,
   purpose,
-}) => {
-  return (
-    <Flex flexWrap="wrap" justifyContent="center" alignItems="center" m="10">
-      <Image src={imageUrl} width={500} height={300} alt="banner" />
-      <Box p="5">
-        <Text color="grey.500" fontSize="sm" fontWeight="medium">
-          {purpose}
-        </Text>
-        <Text fontSize="3xl" fontWeight="bold">
-          {" "}
-          {title1} <br /> {title2}{" "}
-        </Text>
-        <Text fontSize="lg" paddingTop="3" paddingBottom="3" color="gray.700">
-          {" "}
-          {desc1}{" "}
-        </Text>
-        <Text fontSize="lg" paddingTop="3" paddingBottom="3" color="gray.700">
-          {" "}
-          {desc2}{" "}
-        </Text>
-        <Button fontSize="xl">
-          <Link href={linkName}>{buttonText}</Link>
-        </Button>
-      </Box>
-    </Flex>
-  );
-};
+}) => (
+  <Flex flexWrap="wrap" justifyContent="center" alignItems="center" m="10">
+    <Image src={imageUrl} width={500} height={300} alt="banner" />
+    <Box p="5">
+      <Text color="grey.500" fontSize="sm" fontWeight="medium">
+        {purpose}
+      </Text>
+      <Text fontSize="3xl" fontWeight="bold">
+        {" "}
+        {title1} <br /> {title2}{" "}
+      </Text>
+      <Text fontSize="lg" paddingTop="3" paddingBottom="3" color="gray.700">
+        {" "}
+        {desc1}{" "}
+      </Text>
+      <Text fontSize="lg" paddingTop="3" paddingBottom="3" color="gray.700">
+        {" "}
+        {desc2}{" "}
+      </Text>
+      <Button fontSize="xl">
+        <Link href={linkName}>{buttonText}</Link>
+      </Button>
+    </Box>
+  </Flex>
+);
 
 export default function Home({ propertiesForSale, propertiesForRent }) {
-  
   return (
     <div>
       <h1>HELLO WORLD</h1>
@@ -59,7 +56,9 @@ export default function Home({ propertiesForSale, propertiesForRent }) {
       />
 
       <Flex flexWrap="wrap">
-        {propertiesForRent.map((property) => ( <Property property={property} hey={property.id} /> ))}
+        {propertiesForRent.map((property) => (
+          <Property property={property} hey={property.id} />
+        ))}
       </Flex>
 
       <Banner
@@ -74,7 +73,9 @@ export default function Home({ propertiesForSale, propertiesForRent }) {
       />
 
       <Flex flexWrap="wrap">
-        {propertiesForSale.map((property) => ( <Property property={property} hey={property.id} /> ))}
+        {propertiesForSale.map((property) => (
+          <Property property={property} hey={property.id} />
+        ))}
       </Flex>
     </div>
   );
